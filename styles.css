@@ -1,0 +1,636 @@
+/* Base Styles */
+:root {
+    --primary-color: #4a4a4a;
+    --secondary-color: #6e6e6e;
+    --accent-color: #8a8a8a;
+    --light-gray: #f5f5f5;
+    --medium-gray: #e0e0e0;
+    --dark-gray: #333333;
+    --white: #ffffff;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--dark-gray);
+    background-color: var(--light-gray);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+section {
+    padding: 40px 0;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: 5px;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    color: var(--medium-gray);
+    font-weight: 300;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    color: var(--white);
+    text-align: center;
+    padding: 80px 0;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(74, 74, 74, 0.7), rgba(74, 74, 74, 0.7));
+    z-index: 1;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/church_building_new.jpeg');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    color: var(--medium-gray);
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.date-banner {
+    background-color: rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.date-banner h3 {
+    color: var(--white);
+    font-size: 1.3rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Schedule Section */
+.schedule {
+    background-color: var(--white);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.day {
+    margin-bottom: 40px;
+}
+
+.day h2 {
+    text-align: center;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+}
+
+.event {
+    display: flex;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: var(--light-gray);
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.time {
+    flex: 0 0 150px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.description {
+    flex: 1;
+}
+
+/* RSVP Form */
+.rsvp {
+    background-color: var(--medium-gray);
+    text-align: center;
+    position: relative;
+}
+
+.rsvp::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--accent-color));
+}
+
+.rsvp h2 {
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.rsvp h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Google Form Container Styles */
+.google-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.google-form-container p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.google-form-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+.google-form-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: var(--white);
+}
+
+.google-form-btn:active {
+    transform: translateY(-1px);
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+}
+
+.form-message p.success {
+    color: #2e7d32;
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #2e7d32;
+}
+
+.form-message p.error {
+    color: #c62828;
+    background-color: #ffebee;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #c62828;
+}
+
+.form-message p.loading {
+    color: #0277bd;
+    background-color: #e1f5fe;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #0277bd;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 5px;
+    font-family: var(--font-body);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 74, 74, 0.1);
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.radio-group input {
+    width: auto;
+    margin-right: 5px;
+}
+
+.radio-group label {
+    display: inline;
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Checkbox Group Styles */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.checkbox-item label {
+    display: inline;
+    margin: 0;
+    font-weight: normal;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Submission Message Styles */
+.submission-message {
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.submission-message.success {
+    background-color: #e8f5e9;
+    border: 1px solid #a5d6a7;
+}
+
+.submission-message.error {
+    background-color: #ffebee;
+    border: 1px solid #ef9a9a;
+}
+
+.close-btn {
+    margin-top: 15px;
+    background-color: var(--secondary-color);
+}
+
+/* Contacts Section */
+.contacts {
+    background-color: var(--white);
+    text-align: center;
+    position: relative;
+}
+
+.contacts h2 {
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.contacts h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.contact-card {
+    background-color: var(--light-gray);
+    padding: 25px;
+    border-radius: 8px;
+    flex: 1 1 300px;
+    max-width: 350px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.contact-card p {
+    margin-bottom: 8px;
+    color: var(--secondary-color);
+}
+
+.contact-card a {
+    font-weight: 500;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 40px 0 0;
+}
+
+.church-info {
+    text-align: center;
+}
+
+.church-info h3 {
+    color: var(--white);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.church-info p {
+    margin-bottom: 12px;
+    color: var(--medium-gray);
+}
+
+.church-info i {
+    margin-right: 8px;
+    color: var(--medium-gray);
+}
+
+.church-info a {
+    color: var(--medium-gray);
+    transition: color 0.3s ease;
+}
+
+.church-info a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: var(--medium-gray);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+    
+    .date-banner h3 {
+        font-size: 1.1rem;
+    }
+    
+    .event {
+        flex-direction: column;
+    }
+    
+    .time {
+        margin-bottom: 5px;
+    }
+    
+    .contact-card {
+        flex: 1 1 100%;
+    }
+    
+    form {
+        padding: 20px;
+    }
+    
+    .google-form-container {
+        padding: 20px;
+    }
+    
+    .google-form-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    section {
+        padding: 30px 0;
+    }
+    
+    .hero {
+        padding: 50px 0;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .date-banner {
+        padding: 8px 15px;
+    }
+    
+    .date-banner h3 {
+        font-size: 1rem;
+    }
+    
+    .btn, .google-form-btn {
+        width: 100%;
+    }
+    
+    .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .checkbox-group {
+        gap: 8px;
+    }
+}

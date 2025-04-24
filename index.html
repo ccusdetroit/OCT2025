@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCUS Detroit - Regional Music Rehearsal & Youth Meeting</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Christian Congregation in the United States</h1>
+            <h2>CCUS Detroit</h2>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>With great joy, we invite you to</h2>
+            <h1>Detroit's Regional Music Rehearsal<br>and Regional Youth Meeting</h1>
+            <div class="date-banner">
+                <h3>SAVE THE DATE - May 17<sup>th</sup> and 18<sup>th</sup>, 2025</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="schedule">
+        <div class="container">
+            <div class="day">
+                <h2>SATURDAY, MAY 17<sup>th</sup></h2>
+                <div class="event">
+                    <div class="time">12:00 - 1:30 PM</div>
+                    <div class="description">Lunch</div>
+                </div>
+                <div class="event">
+                    <div class="time">2:00 PM</div>
+                    <div class="description">Regional Music Rehearsal</div>
+                </div>
+                <div class="event">
+                    <div class="time">4:00 - 6:30 PM</div>
+                    <div class="description">Snacks and refreshments / Break time</div>
+                </div>
+                <div class="event">
+                    <div class="time">6:30 PM</div>
+                    <div class="description">Special service with seeking of Gifts</div>
+                </div>
+                <div class="event">
+                    <div class="time">~8:00 PM</div>
+                    <div class="description">Dinner</div>
+                </div>
+            </div>
+            
+            <div class="day">
+                <h2>SUNDAY, MAY 18<sup>th</sup></h2>
+                <div class="event">
+                    <div class="time">8:45 - 9:45 AM</div>
+                    <div class="description">Coffee table and light snacks</div>
+                </div>
+                <div class="event">
+                    <div class="time">10:00 AM</div>
+                    <div class="description">Regional Youth Meeting</div>
+                </div>
+                <div class="event">
+                    <div class="time">~12:00 - 2:30 PM</div>
+                    <div class="description">Lunch</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rsvp">
+        <div class="container">
+            <h2>Please RSVP by May 9<sup>th</sup>, 2025</h2>
+            <form id="rsvpForm" class="rsvp-form">
+                <div class="form-group">
+                    <label for="Name">Full Name:</label>
+                    <input type="text" id="Name" name="Name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="Phone">Phone Number:</label>
+                    <input type="tel" id="Phone" name="Phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="Attendees">Number of People Attending:</label>
+                    <input type="number" id="Attendees" name="Attendees" min="1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>What services will you attend?</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="service1" name="Service_Music_Rehearsal" value="Yes">
+                            <label for="service1">Regional Music Rehearsal</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="service2" name="Service_Seeking_Gifts" value="Yes">
+                            <label for="service2">Special service with seeking of Gifts</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="service3" name="Service_Youth_Meeting" value="Yes">
+                            <label for="service3">Regional Youth Meeting</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Do you need lodging?</label>
+                    <div class="radio-group">
+                        <input type="radio" id="lodging-yes" name="Lodging" value="Yes" required>
+                        <label for="lodging-yes">Yes</label>
+                        
+                        <input type="radio" id="lodging-no" name="Lodging" value="No">
+                        <label for="lodging-no">No</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Do you need transportation?</label>
+                    <div class="radio-group">
+                        <input type="radio" id="transportation-yes" name="Transportation" value="Yes" required>
+                        <label for="transportation-yes">Yes</label>
+                        
+                        <input type="radio" id="transportation-no" name="Transportation" value="No">
+                        <label for="transportation-no">No</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="Comments">Additional Comments:</label>
+                    <textarea id="Comments" name="Comments"></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Submit RSVP</button>
+                
+                <div id="form-message" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <section class="contacts">
+        <div class="container">
+            <h2>Contact Information</h2>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <h3>Samuel Pereira</h3>
+                    <p>Local Deacon</p>
+                    <p><a href="mailto:samuel.pereira@ccus.org">samuel.pereira@ccus.org</a></p>
+                    <p><a href="tel:+19472520845">+1 (947) 252-0845</a></p>
+                </div>
+                <div class="contact-card">
+                    <h3>Gabriel Bacarin</h3>
+                    <p>Local Youth Cooperator</p>
+                    <p><a href="mailto:gabriel.bacarin@ccus.org">gabriel.bacarin@ccus.org</a></p>
+                    <p><a href="tel:+17347173159">+1 (734) 717-3159</a></p>
+                </div>
+                <div class="contact-card">
+                    <h3>Eugenio Sena</h3>
+                    <p>Local Music Assistant</p>
+                    <p><a href="mailto:eugenio.sena@ccus.org">eugenio.sena@ccus.org</a></p>
+                    <p><a href="tel:+15869227985">+1 (586) 922-7985</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="church-info">
+                <h3>Christian Congregation in the United States - CCUS Detroit</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 236 E Thirteen Mile Rd, Royal Oak, MI 48073</p>
+                <p><i class="fas fa-globe"></i> <a href="https://ccus.org" target="_blank">ccus.org</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+15865361172">(586) 536-1172</a></p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Christian Congregation in the United States. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
