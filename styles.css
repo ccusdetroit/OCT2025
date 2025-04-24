@@ -433,7 +433,7 @@ textarea {
 
 /* Contacts Section */
 .contacts {
-    background-color: var(--white);
+    background-color: var(--medium-gray);
     text-align: center;
     position: relative;
 }
@@ -464,7 +464,7 @@ textarea {
 }
 
 .contact-card {
-    background-color: var(--light-gray);
+    background-color: var(--white);
     padding: 25px;
     border-radius: 8px;
     flex: 1 1 300px;
